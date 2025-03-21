@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Bid Evaluation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vendor Bid Evaluation</h1>
+        <div class="input-section">
+            <label>Client Name: <input type="text" id="clientName"></label>
+            <label>Project Name: <input type="text" id="projectName"></label>
+            <label>Item to be Purchased: <input type="text" id="itemName"></label>
+            <label>Number of Vendors: <input type="number" id="numVendors" min="1" value="1"></label>
+            <button id="generateTable">Generate Table</button>
+        </div>
+        
+        <table id="evaluationTable">
+            <thead>
+                <tr>
+                    <th>Specification</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="addSpecification">Add Specification</button>
+        <button id="saveEvaluation">Save Evaluation</button>
+        
+        <div class="final-evaluation">
+            <h2>Final Evaluation</h2>
+            <label>Recommended Vendor: <input type="text" id="recommendedVendor"></label>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
